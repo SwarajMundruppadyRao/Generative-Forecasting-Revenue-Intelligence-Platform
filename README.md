@@ -30,9 +30,9 @@ graph TB
     L --> N[RAG Pipeline]
     N --> M
     
-    M --> O[/forecast endpoint]
-    M --> P[/rag-answer endpoint]
-    M --> Q[/graph-insights endpoint]
+    M --> O["POST /forecast"]
+    M --> P["POST /rag-answer"]
+    M --> Q["POST /graph-insights"]
 ```
 
 ## 🚀 Features
