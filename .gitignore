@@ -1,0 +1,56 @@
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Data
+data/processed/
+*.csv.gz
+
+# Models
+forecasting/models/*.pth
+forecasting/models/*.pt
+
+# FAISS indices
+rag/faiss_index/
+rag/corpus/
+
+# Graph
+graph/*.pt
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Neo4j
+neo4j_data/
+neo4j_logs/

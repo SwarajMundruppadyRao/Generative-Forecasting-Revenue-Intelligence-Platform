@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Intelligence Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background gradient -->
+    <div class="gradient-bg"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M16 8L22 12V20L16 24L10 20V12L16 8Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" stop-color="#667eea"/>
+                            <stop offset="100%" stop-color="#764ba2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Revenue Intelligence</span>
+            </div>
+            <nav class="nav">
+                <a href="#chat" class="nav-link active">Chat</a>
+                <a href="#examples" class="nav-link">Examples</a>
+                <a href="http://localhost:8000/docs" target="_blank" class="nav-link">API Docs</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1 class="hero-title">
+                    AI-Powered Revenue
+                    <span class="gradient-text">Forecasting</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Ask questions, get forecasts, and discover insights with our advanced AI platform
+                </p>
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-value">2</div>
+                        <div class="stat-label">AI Models</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">45</div>
+                        <div class="stat-label">Stores</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">421K</div>
+                        <div class="stat-label">Records</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Section -->
+            <section class="chat-section" id="chat">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h2>AI Assistant</h2>
+                        <div class="status">
+                            <span class="status-dot"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <p>Hello! I'm your Revenue Intelligence AI assistant. I can help you with:</p>
+                                <ul>
+                                    <li>📊 Revenue forecasts for any store/department</li>
+                                    <li>💡 Natural language questions about your data</li>
+                                    <li>🔍 Store similarity analysis</li>
+                                    <li>📈 Trend insights and predictions</li>
+                                </ul>
+                                <p>Try one of the example commands below or ask me anything!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-container">
+                        <input 
+                            type="text" 
+                            class="chat-input" 
+                            id="chatInput" 
+                            placeholder="Ask about forecasts, trends, or store insights..."
+                        />
+                        <button class="send-button" id="sendButton">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M2 10L18 2L10 18L8 11L2 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Examples Section -->
+            <section class="examples-section" id="examples">
+                <h2 class="section-title">Example Commands</h2>
+                <div class="examples-grid">
+                    <div class="example-card" data-command="forecast" data-store="1" data-dept="1">
+                        <div class="example-icon">📊</div>
+                        <h3>Get Forecast</h3>
+                        <p>Forecast revenue for Store 1, Department 1</p>
+                        <code>Forecast revenue for store 1 department 1</code>
+                        <button class="try-button">Try it</button>
+                    </div>
+
+                    <div class="example-card" data-command="similar" data-store="1">
+                        <div class="example-icon">🔍</div>
+                        <h3>Find Similar Stores</h3>
+                        <p>Discover stores similar to Store 1</p>
+                        <code>Which stores are similar to store 1?</code>
+                        <button class="try-button">Try it</button>
+                    </div>
+
+                    <div class="example-card" data-command="insights" data-store="5">
+                        <div class="example-icon">💡</div>
+                        <h3>Store Insights</h3>
+                        <p>Get detailed insights about Store 5</p>
+                        <code>Tell me about store 5 performance</code>
+                        <button class="try-button">Try it</button>
+                    </div>
+
+                    <div class="example-card" data-command="compare" data-store="1">
+                        <div class="example-icon">📈</div>
+                        <h3>Compare Models</h3>
+                        <p>Compare LSTM vs Transformer forecasts</p>
+                        <code>Compare LSTM and Transformer for store 1</code>
+                        <button class="try-button">Try it</button>
+                    </div>
+
+                    <div class="example-card" data-command="trends" data-dept="1">
+                        <div class="example-icon">📉</div>
+                        <h3>Department Trends</h3>
+                        <p>Analyze trends for Department 1</p>
+                        <code>What are the trends for department 1?</code>
+                        <button class="try-button">Try it</button>
+                    </div>
+
+                    <div class="example-card" data-command="holiday" data-store="10">
+                        <div class="example-icon">🎄</div>
+                        <h3>Holiday Impact</h3>
+                        <p>Analyze holiday sales impact</p>
+                        <code>How do holidays affect store 10 sales?</code>
+                        <button class="try-button">Try it</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Powered by LSTM & Transformer Models • GPU-Accelerated • Real-time Insights</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
